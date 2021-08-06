@@ -1,0 +1,38 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Sport</th>
+      <th scope="col">Title</th>
+      <th scope="col">type</th>
+      <th scope="col">entryFee</th>
+      <th scope="col">prizePool</th>
+      <th scope="col">enteredEntry</th>
+      <th scope="col">maxEntry</th>
+      <th scope="col">regDeadline</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lobby of lobbies">
+      <th scope="row">{{ lobby.id }}</th>
+      <td>{{ lobby.title }}</td>
+      <td>{{ lobby.sport }}</td>
+      <td>{{ lobby.type }}</td>
+      <td>{{ lobby.entryFee }}</td>
+      <td>{{ lobby.prizePool }}</td>
+      <td>{{ lobby.enteredEntry }}</td>
+      <td>{{ lobby.maxEntry }}</td>
+      <td>{{ lobby.regDeadline }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="ViewLobby(lobby.id)"
+        >
+          View Data
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
